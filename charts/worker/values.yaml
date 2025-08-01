@@ -1,0 +1,8 @@
+worker:
+  replicaCount: 1
+  labels:
+    app: worker
+  image:
+    repository: dockersamples/examplevotingapp_worker
+    tag: latest
+    pullPolicy: IfNotPresent
