@@ -1,0 +1,1 @@
+# argocd-app-of-apps-voting-demo
