@@ -2,10 +2,9 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: vote-app-ingress-deletion-hook
+  name: {{ .Values.ingress.name }}
   namespace: {{ .Release.Namespace }}
   annotations:
-    "helm.sh/resource-policy": "delete"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: {{ .Values.ingress.className }}
