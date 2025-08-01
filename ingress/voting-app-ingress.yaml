@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: voting-app-ingress
+  name: "{{ .Release.Name }}-ingress"
   namespace: voting-app
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
@@ -15,13 +15,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: vote
+                name: {{ .Release.Name }}
                 port:
-                  number: 80
-          - path: /result/?(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: result
-                port:
-                  number: 80
+                  number: {{ .Values.service.port }}
