@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: common-ingress
+  name: ingress
   namespace: voting-app
   annotations:
     {{- range $key, $value := .Values.ingress.annotations }}
@@ -11,16 +11,16 @@ metadata:
 spec:
   ingressClassName: {{ .Values.ingress.className }}
   rules:
-    {{- range $key, $host := .Values.ingress.hosts }}
-    - host: {{ $host.host }}
+    {{- range .Values.ingress.hosts }}
+    - host: {{ .host }}
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: {{ $host.serviceName }}
+                name: {{ .serviceName }}
                 port:
-                  number: {{ $host.servicePort }}
+                  number: {{ .servicePort }}
     {{- end }}
 {{- end }}

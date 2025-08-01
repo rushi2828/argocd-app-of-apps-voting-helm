@@ -1,0 +1,12 @@
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  hosts:
+    - host: vote.127.0.0.1.nip.io
+      serviceName: vote
+      servicePort: 80
+    - host: result.127.0.0.1.nip.io
+      serviceName: result
+      servicePort: 80
