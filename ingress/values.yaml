@@ -5,8 +5,8 @@ ingress:
   host: demo.local
   paths:
     - path: /vote
-      serviceName: vote
+      serviceName: vote-app
       servicePort: 80
     - path: /result
-      serviceName: result
+      serviceName: result-app
       servicePort: 80
