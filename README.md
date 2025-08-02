@@ -1,5 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
 # ArgoCD App-of-Apps Voting Demo
 
 Welcome! This project is a demonstration of deploying a sample Voting App on a Kubernetes cluster using the **ArgoCD App-of-Apps pattern** and Helm charts.
@@ -121,3 +119,4 @@ Pull requests and issues are always welcome.
 MIT
 
 > **Happy deploying with ArgoCD!**
+
