@@ -110,13 +110,3 @@ kubectl get all -n ingress-nginx
 - [Kubernetes Docs](https://kubernetes.io/docs/)
 
 
-## 🤝 Contributing
-
-Pull requests and issues are always welcome.
-
-## 📝 License
-
-MIT
-
-> **Happy deploying with ArgoCD!**
-
